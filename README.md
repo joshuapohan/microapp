@@ -15,5 +15,6 @@ Start the program
 POST http://127.0.0.1:3000/register
 POST http://127.0.0.1:3000/login
 POST http://127.0.0.1:3000/login-history
+GET http://127.0.0.1:3000/login-history
 Sample postman requests can be imported from 
 *login history app api.postman_collection.json*
