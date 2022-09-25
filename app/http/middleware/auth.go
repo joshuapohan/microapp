@@ -33,7 +33,7 @@ func AuthMiddleware(next http.Handler) http.Handler {
 				http_util.RespondWithError(w, http.StatusBadRequest, http_util.Error{Message: "Forbidden"})
 				return nil, fmt.Errorf("Error signing method")
 			}
-			return []byte(os.Getenv("SECRET")), nil
+			return []byte(os.Getenv("JWT_SECRET")), nil
 		})
 		if err != nil {
 			http_util.RespondWithError(w, http.StatusForbidden, http_util.Error{Message: "Forbidden"})
